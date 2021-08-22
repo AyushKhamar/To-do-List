@@ -1,0 +1,174 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background:blueviolet;
+    color:whitesmoke;
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 100vh;
+}
+header{
+    font-size: 1.5rem;
+}
+header,form{
+    min-height:20vh;
+    /* min-width: 100vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+form input,form button{
+    padding:5px;
+    background-color: whitesmoke;
+    border:none ;
+    font-size: 2rem;
+    
+    
+}
+form input{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+form button{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.todobutton{
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: blueviolet;
+    
+    
+}
+.todobutton:hover{
+    transition: all 0.2s ease-in;
+    color: blueviolet;
+    background-color: whitesmoke;
+}
+.todocontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+/* the list in the html(main list) */
+.todolist{
+    min-width: 30%;
+    list-style: none;
+
+}
+/* div container */
+.todo{
+margin: 0.5rem;
+background-color: whitesmoke;
+color:black;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 1.5rem;
+border-radius: 5px;
+transition: all 0.7s ease-in;
+}
+.todo li{
+    flex:  1;
+}
+.completebutton{
+    background-color: greenyellow;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    padding:1rem;
+    font-size: 1rem;
+    transition: all 0.2s ease-in;
+    /* border-radius: 5px; */
+    
+    /* border: 2px solid cyan; */
+    /* border-radius: 5px; */
+}
+.completebutton:hover{
+    background-color: rgb(109, 160, 33);
+}
+.trashbutton:hover{
+    background-color: rgb(153, 18, 18);
+}
+.trashbutton{
+    background-color: red;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    padding:1rem;
+    font-size: 1rem;
+    /* transition: all 0.2s ease-in; */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all 0.2s ease-in;
+    
+    /* border: 2px solid cyan; */
+    /* border-radius: 5px; */
+}
+.todoitem{
+    padding: 0px 10px;
+}
+.fa-check,.fa-trash{
+    pointer-events: none;
+    
+}
+.completed{
+    transition: all 0.2s ease-in;
+    text-decoration:line-through ;
+    opacity: 0.5;
+}
+.fall{
+    /* transition:1s ease-in; */
+    transform: translateY(9rem) rotateZ(30deg);
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border:none;
+    color: blueviolet;
+    width: 10rem;
+    cursor: pointer;
+    padding:1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+}
+.select{
+    margin:1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+
+    
+    
+}
+
+.select::after{
+    content:"\25BC";
+    color:blueviolet;
+    position: absolute;
+    background: white;
+    top : 0;
+    right : 0;
+    pointer-events: none;
+    padding:1rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.select:hover::after{
+    transition: all 0.2s ease-in;
+    background: blueviolet;
+    color:white;
+}
+
